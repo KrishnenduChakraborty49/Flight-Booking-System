@@ -90,7 +90,7 @@ const AdminDashboard = () => {
 
         <div className="glass-card" style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
           <h3 style={{ fontSize: '1.15rem', margin: 0 }}>Bookings & Tickets</h3>
-          <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Monitor all reservations made on Comet Airways. Force cancellations and print e-tickets.</p>
+          <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Monitor all reservations made on Pinnacle Airways. Force cancellations and print e-tickets.</p>
           <Link to="/admin/bookings" className="btn btn-primary" style={{ marginTop: 'auto' }}>
             Manage Bookings &rarr;
           </Link>

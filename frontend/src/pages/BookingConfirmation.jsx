@@ -53,7 +53,7 @@ const BookingConfirmation = () => {
         </div>
         <div>
           <h2 style={{ fontSize: '2rem', margin: 0, color: '#fff' }}>Booking Confirmed!</h2>
-          <p style={{ color: 'var(--text-secondary)' }}>Have a safe and pleasant flight on Comet Airways.</p>
+          <p style={{ color: 'var(--text-secondary)' }}>Have a safe and pleasant flight on Pinnacle Airways.</p>
         </div>
 
         <div style={{

@@ -16,7 +16,7 @@ const Navbar = () => {
     <nav className="navbar">
       <Link to="/" className="nav-brand">
         <Plane size={24} style={{ transform: 'rotate(45deg)', color: '#818cf8' }} />
-        <span>Comet Airways</span>
+        <span>Pinnacle Airways</span>
       </Link>
       
       <div className="nav-links">

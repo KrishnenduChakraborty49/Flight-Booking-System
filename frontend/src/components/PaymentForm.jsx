@@ -237,7 +237,7 @@ const PaymentForm = ({ amount, onSubmit, loading }) => {
             required
           >
             <option value="" disabled>Choose your Bank</option>
-            <option value="COMET_BANK">Comet Savings Bank</option>
+            <option value="PINNACLE_BANK">Pinnacle Savings Bank</option>
             <option value="ANTIGRAVITY_BANK">Antigravity Trust Bank</option>
             <option value="NATIONAL_FED_BANK">National Federal Bank</option>
           </select>
