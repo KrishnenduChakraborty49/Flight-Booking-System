@@ -16,6 +16,7 @@ const FlightSearchForm = ({ onSearch, initialValues = {} }) => {
     'Dubai (DXB)',
     'Mumbai (BOM)',
     'Delhi (DEL)',
+    'Kolkata (CCU)',
   ];
 
   const handleSubmit = (e) => {

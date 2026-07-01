@@ -43,7 +43,7 @@ public class DatabaseSeeder implements CommandLineRunner {
         }
 
         if (flightService.getAllFlights().isEmpty()) {
-            LocalDateTime now = LocalDateTime.now().plusDays(2);
+            LocalDateTime now = LocalDateTime.now();
 
             flightService.createFlight(FlightDTO.builder()
                     .flightNumber("AA-101")
@@ -87,6 +87,30 @@ public class DatabaseSeeder implements CommandLineRunner {
                     .arrivalTime(now.plusDays(3).withHour(9).withMinute(0))
                     .duration("2h 15m")
                     .price(new BigDecimal("120.00"))
+                    .build());
+
+            // Kolkata (CCU) -> London (LHR) Flight 1: Air India
+            flightService.createFlight(FlightDTO.builder()
+                    .flightNumber("AI-111")
+                    .airline("Air India")
+                    .source("Kolkata (CCU)")
+                    .destination("London (LHR)")
+                    .departureTime(now.withHour(10).withMinute(0))
+                    .arrivalTime(now.withHour(16).withMinute(30))
+                    .duration("11h 30m")
+                    .price(new BigDecimal("650.00"))
+                    .build());
+
+            // Kolkata (CCU) -> London (LHR) Flight 2: Indigo
+            flightService.createFlight(FlightDTO.builder()
+                    .flightNumber("6E-201")
+                    .airline("IndiGo")
+                    .source("Kolkata (CCU)")
+                    .destination("London (LHR)")
+                    .departureTime(now.withHour(18).withMinute(30))
+                    .arrivalTime(now.plusDays(1).withHour(2).withMinute(0))
+                    .duration("12h 30m")
+                    .price(new BigDecimal("450.00"))
                     .build());
         }
     }
