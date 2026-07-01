@@ -89,7 +89,7 @@ public class DatabaseSeeder implements CommandLineRunner {
                     .price(new BigDecimal("120.00"))
                     .build());
 
-            // Kolkata (CCU) -> London (LHR) Flight 1: Air India
+            // Kolkata (CCU) -> London (LHR) Flight 1: Air India (10:00 AM)
             flightService.createFlight(FlightDTO.builder()
                     .flightNumber("AI-111")
                     .airline("Air India")
@@ -101,7 +101,7 @@ public class DatabaseSeeder implements CommandLineRunner {
                     .price(new BigDecimal("650.00"))
                     .build());
 
-            // Kolkata (CCU) -> London (LHR) Flight 2: Indigo
+            // Kolkata (CCU) -> London (LHR) Flight 2: Indigo (6:30 PM)
             flightService.createFlight(FlightDTO.builder()
                     .flightNumber("6E-201")
                     .airline("IndiGo")
@@ -111,6 +111,30 @@ public class DatabaseSeeder implements CommandLineRunner {
                     .arrivalTime(now.plusDays(1).withHour(2).withMinute(0))
                     .duration("12h 30m")
                     .price(new BigDecimal("450.00"))
+                    .build());
+
+            // Kolkata (CCU) -> London (LHR) Flight 3: Air India (8:30 PM / 20:30 IST)
+            flightService.createFlight(FlightDTO.builder()
+                    .flightNumber("AI-112")
+                    .airline("Air India")
+                    .source("Kolkata (CCU)")
+                    .destination("London (LHR)")
+                    .departureTime(now.withHour(20).withMinute(30))
+                    .arrivalTime(now.plusDays(1).withHour(8).withMinute(0))
+                    .duration("11h 30m")
+                    .price(new BigDecimal("690.00"))
+                    .build());
+
+            // Kolkata (CCU) -> London (LHR) Flight 4: Indigo (10:00 PM / 22:00 IST)
+            flightService.createFlight(FlightDTO.builder()
+                    .flightNumber("6E-202")
+                    .airline("IndiGo")
+                    .source("Kolkata (CCU)")
+                    .destination("London (LHR)")
+                    .departureTime(now.withHour(22).withMinute(0))
+                    .arrivalTime(now.plusDays(1).withHour(10).withMinute(30))
+                    .duration("12h 30m")
+                    .price(new BigDecimal("490.00"))
                     .build());
         }
     }
